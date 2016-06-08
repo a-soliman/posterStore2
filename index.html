@@ -7,52 +7,11 @@
 		<link rel="stylesheet" href="css/style.css"/>
 
     <script src="script/jquery.1.9.1.js"></script>
+    <script src="plugin-tabs/plugin_tabs_1.0.js"></script>
     <script>
-
-    $(document).ready(function() {
-    	var $tabs = $('#categories > h3'),
-    	 $contents = $('#categories > ul');
-    	 /*
-    		$($tabs[0]).click(function() {
-    			$tabs.removeClass('active');
-    			$($tabs[0]).addClass('active');
-    			$contents.removeClass('active');
-    			$($contents[0]).addClass('active');
-    		});
-
-    			$($tabs[1]).click(function() {
-    			$tabs.removeClass('active');
-    			$($tabs[1]).addClass('active');
-    			$contents.removeClass('active');
-    			$($contents[1]).addClass('active');
-    		});
-
-    			$($tabs[2]).click(function() {
-    			$tabs.removeClass('active');
-    			$($tabs[2]).addClass('active');
-    			$contents.removeClass('active');
-    			$($contents[2]).addClass('active');
-    		});
-    		*/
-
-    		// PRODUCTION READY CODE..
-    		$tabs.each(function(i, tab) {
-    			var $tab = $(tab),
-    				$content = $($contents[i]);
-    			$tab.click(function() {
-    				$tabs.removeClass('active');
-    				$tab.addClass('active');
-    				$contents.removeClass('active');
-    				$content.addClass('active');
-    			});
-    		});
-
-    		// set initial state.
-    		$tabs.first().addClass('active first');
-    		$tabs.last().addClass('last')
-    		$contents.first().addClass('active');
-
-    });
+    	$(document).ready(function() {
+    		$('#categories').tabbify();
+    	});
     </script>
     		
 	</head>
